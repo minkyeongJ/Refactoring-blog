@@ -1,47 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './css/Author.css'
 
-function Posts(){
+function Posts({post}){
+  const postId = post.id;
+  const postImg = post.thumbnail;
+  const postTitle = post.title;
+  const postCategory = post.category;
+  const postProfileImg = post.profileImg;
+  const postUserName = post.userName;
+  const postCreated = post.created;
+  const postContents = post.contents;
+  const postDescription = postContents[0].text;
+
+  // const img = data.posts.postId;
+
+  // const post
+  console.log(postId);
+  console.log(postContents);
+  // console.log(data.posts.postId);
   return (
-    <>
     <li>
       <a href="post-view.html" className="post">
         <article>
-          {/* <img src={require('../images/post-img6.jpg').default} alt="" /> */}
-          <img src='assets/post-img6.jpg' alt="" />
+          <img src={postImg} alt="" />
           <div className="contents-wrap">
             {/* <!-- category --> */}
             <dl className="category">
               <dt className="a11y-hidden">Category</dt>
-              <dd>Life</dd>
-              <dd>Style</dd>
+              {postCategory.map(category => (
+                <dd>{category}</dd>
+              ))}
             </dl>
             {/* <!-- //category --> */}
 
-            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+            <h3>{postTitle}</h3>
 
             {/* <!-- author --> */}
             <dl className="author-wrap">
               <dt className="a11y-hidden">Author</dt>
-              <dd className="author"><img src='assets/profile.jpg' alt="" /> Chilli</dd>
+              <dd className="author"><img src={postProfileImg} alt="" /> {postUserName}</dd>
               <dt className="a11y-hidden">Created</dt>
-              <dd className="created">2022.05.25</dd>
+              <dd className="created">{postCreated}</dd>
             </dl>
             {/* <!-- //author --> */}
 
             <p className="post-description">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas, voluptate soluta corrupti dolore quidem. Placeat, eaque! Exercitationem est
-              facilis dolor quas odio cum incidunt repudiandae vel. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas, voluptate soluta
-              corrupti dolore quidem. Placeat, eaque! Exercitationem est facilis dolor quas odio cum incidunt repudiandae vel. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
-              illum nostrum perferendis voluptas, voluptate soluta corrupti dolore quidem. Placeat, eaque! Exercitationem est facilis dolor quas odio cum incidunt repudiandae vel. Lorem ipsum
-              dolor sit amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas, voluptate soluta corrupti dolore quidem. Placeat, eaque! Exercitationem est facilis
-              dolor quas odio cum incidunt repudiandae vel."
+              {postDescription}
             </p>
           </div>
         </article>
       </a>
     </li>
-    </>
   );
 };
 

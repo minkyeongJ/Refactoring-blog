@@ -1,6 +1,6 @@
 import './css/Banner.css';
 
-function Banner(){
+function MainBanner(){
   return (
     <div className="banner">
 			<div className="max-width">
@@ -16,4 +16,4 @@ function Banner(){
   )
 }
 
-export default Banner;
+export default MainBanner;
