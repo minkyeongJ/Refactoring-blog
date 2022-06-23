@@ -24,3 +24,13 @@
 - public 폴더안에 폴더를 만들고 이미지 파일 넣은 후 경로 작성하기 ``````
 # 이슈
 - profile-img가 ```{require().default}```로 작성하면 동작하지 않음
+- json data 사용하기
+  - https://velog.io/@yyeonjju/TIL-React-%EC%95%84%EC%A3%BC-%EC%89%BD%EA%B2%8C-%EB%94%B0%EB%9D%BC%ED%95%98%EB%8A%94-Mock-Data-%ED%99%9C%EC%9A%A9%EB%B2%95
+- TypeError: Cannot read property 'map' of undefined
+  - ```data.posts.map()``` => ```data.posts && data.posts.map()```
+- props 받을 때 {} 하기
+- 페이지 주소만 바뀌고 페이지 이동이 안될 때
+  - X https://goddaehee.tistory.com/m/305 
+  - O https://velog.io/@jzizsuuz/React-React-Router-Dom-Link-%ED%81%B4%EB%A6%AD-%EC%8B%9C-%EC%9D%B4%EB%8F%99-%EC%9D%B4-%EC%95%88%EB%90%98%EB%8A%94-%EC%98%A4%EB%A5%98 
+    - index.js의 ```<React.StrictMode/>```를 제거해주니 해결
+    - [Strict 모드 공식문서](https://ko.reactjs.org/docs/strict-mode.html)
