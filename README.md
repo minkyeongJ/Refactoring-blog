@@ -21,7 +21,7 @@
 # 사용한 방법들
 1. 이미지 경로 찾기
 - ```<img src={require('./src_assets/logo192.png').default}/>```
-- public 폴더안에 폴더를 만들고 이미지 파일 넣은 후 경로 작성하기 ``````
+- public 폴더안에 폴더를 만들고 이미지 파일 넣은 후 경로 작성하기
 # 이슈
 - profile-img가 ```{require().default}```로 작성하면 동작하지 않음
 - json data 사용하기
@@ -34,3 +34,14 @@
   - O https://velog.io/@jzizsuuz/React-React-Router-Dom-Link-%ED%81%B4%EB%A6%AD-%EC%8B%9C-%EC%9D%B4%EB%8F%99-%EC%9D%B4-%EC%95%88%EB%90%98%EB%8A%94-%EC%98%A4%EB%A5%98 
     - index.js의 ```<React.StrictMode/>```를 제거해주니 해결
     - [Strict 모드 공식문서](https://ko.reactjs.org/docs/strict-mode.html)
+- map오류
+  - [&& 사용하기](https://velog.io/@dum6894/%EC%98%A4%EB%A5%98%ED%95%B4%EA%B2%B0-TypeError-Cannot-read-property-map-of-undefined)
+- Link로 데이터 보내기
+  - [React Router v6 튜토리얼](https://velog.io/@velopert/react-router-v6-tutorial)
+  - [리액트 라우터 정리1](https://velog.io/@gytlr01/react-router-%EC%A0%95%EB%A6%AC)
+  - [리액트 라우터 정리2](https://ventos06.tistory.com/7)
+  - [리액트 라우터 정리3](https://gongbu-ing.tistory.com/44)
+  - [Link로 props 보내기](https://velog.io/@sham/Router-Props-link%EB%A1%9C-%EC%A0%84%EB%8B%AC%ED%95%98%EB%8A%94-props)
+- 게시물 역순으로 출력하기
+  - ```data.posts.slice(0).reverse().map()```
+  - 얕은 복사로 원본 배열을 건드리지 않고 역순으로 출력하기

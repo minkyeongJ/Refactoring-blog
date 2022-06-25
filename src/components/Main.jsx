@@ -19,15 +19,17 @@ function Main(){
       setData(data);
     });
   }, []);
+
+  const postView = "/postView";
+
   return (
     <main>
       <div className="max-width">
 				<h2 className="a11y-hidden">Post</h2>
 				<ul className="posts">
-          {data.posts && data.posts.map(post => (
-            <Link to="/postVeiw">
-              <Posts post={post} />
-              {console.log(post)}
+          {data.posts && data.posts.slice(0).reverse().map(post => (
+            <Link to={ `${postView}/${post.id}`}>
+              <Posts post={ post } />
             </Link>
           ))}
         </ul>

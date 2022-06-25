@@ -1,4 +1,32 @@
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+
 function PostView() {
+  const postId = useParams().id;
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/data.json", {
+      method: 'GET',
+    })
+    .then(res => res.json())
+    .then(data => {
+      setData(data);
+    });
+  }, []);
+
+  const postDatas = data.posts && data.posts[postId-1];
+  const postTitle = postDatas && postDatas.title;
+  const postCategory = postDatas && postDatas.category;
+  const postProfileImg = postDatas && postDatas.profileImg;
+  const postUserName = postDatas && postDatas.userName;
+  const postCreated = postDatas && postDatas.created;
+  const postContents = postDatas && postDatas.contents;
+  const postDescription = postDatas && postContents[0].text;
+
+  const $viewContents = document.querySelector(".view-contents");
+
   return (
     <div className="view">
 			<div className="max-width">
@@ -7,42 +35,37 @@ function PostView() {
 						{/* <!-- author --> */}
 						<dl className="author-wrap">
 							<dt className="a11y-hidden">Author</dt>
-							<dd className="author"><img src="assets/profile.jpg" alt="" /> Chilli</dd>
+							<dd className="author"><img src={postProfileImg} alt="" /> {postUserName}</dd>
 							<dt className="a11y-hidden">Created</dt>
-							<dd className="created">2022.05.25</dd>
+							<dd className="created">{postCreated}</dd>
 						</dl>
 						{/* <!-- //author --> */}
 
 						{/* <!-- category --> */}
 						<dl className="category">
 							<dt className="a11y-hidden">Category</dt>
-							<dd>Life</dd>
-							<dd>Style</dd>
+							{postCategory && postCategory.map(category => (
+                <dd>{category}</dd>
+              ))}
 						</dl>
 						{/* <!-- //category --> */}
 						<div className="title-wrap">
-							<h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+							<h2>{postTitle}</h2>
 							<button className="btn-like">Like</button>
 						</div>
 						<hr />
 						<div className="view-contents">
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas, voluptate soluta corrupti dolore quidem. Placeat, eaque! Exercitationem est
-								facilis dolor quas odio cum incidunt repudiandae vel. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas, voluptate soluta corrupti
-								dolore quidem. Placeat, eaque! Exercitationem est facilis dolor quas odio cum incidunt repudiandae vel. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore illum
-								nostrum perferendis voluptas, voluptate soluta corrupti dolore quidem. Placeat, eaque! Exercitationem est facilis dolor quas odio cum incidunt repudiandae vel. Lorem ipsum dolor sit
-								amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas, voluptate soluta corrupti dolore quidem. Placeat, eaque! Exercitationem est facilis dolor quas odio
-								cum incidunt repudiandae vel.
-							</p>
-							<img src="./images/post-background6.jpg" alt="" />
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas, voluptate soluta corrupti dolore quidem. Placeat, eaque! Exercitationem est
-								facilis dolor quas odio cum incidunt repudiandae vel. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas, voluptate soluta corrupti
-								dolore quidem. Placeat, eaque! Exercitationem est facilis dolor quas odio cum incidunt repudiandae vel. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore illum
-								nostrum perferendis voluptas, voluptate soluta corrupti dolore quidem. Placeat, eaque! Exercitationem est facilis dolor quas odio cum incidunt repudiandae vel. Lorem ipsum dolor sit
-								amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas, voluptate soluta corrupti dolore quidem. Placeat, eaque! Exercitationem est facilis dolor quas odio
-								cum incidunt repudiandae vel.
-							</p>
+                {
+                  postContents && postContents.map((data) => {
+                    const postType = document.createElement(data.type);
+                    if(data.type === 'p'){
+                      postType.textContent = data.text;
+                    }else if(data.type === 'img'){
+                      postType.src = data.src;
+                    }
+                    $viewContents.append(postType);
+                  })
+                }
 						</div>
 						<div className="btn-group">
 							<a href="#" className="btn-modify">

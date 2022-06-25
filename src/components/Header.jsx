@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './css/Header.css'
 import './css/Profile.css'
 import Login from './Login'
@@ -9,9 +10,9 @@ function Header() {
       <header>
         <div className="max-width">
           <h1>
-            <a href="./">
+            <Link to={'/'}>
               <img src={require(`../assets/Logo.svg`).default} alt="My Blog" />
-            </a>
+            </Link>
           </h1>
           <Login />
           {/* <Logout /> */}
