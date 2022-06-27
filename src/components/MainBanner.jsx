@@ -5,7 +5,7 @@ function MainBanner(){
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/data.json", {
+    fetch("http://localhost:3000/Refactoring-blog/data.json", {
       method: 'GET',
     })
     .then(res => res.json())

@@ -50,3 +50,10 @@
 - 게시물 역순으로 출력하기
   - ```data.posts.slice(0).reverse().map()```
   - 얕은 복사로 원본 배열을 건드리지 않고 역순으로 출력하기
+- 배포를 위한 package.json 설정 이후 작업한 파일 깨짐
+- github 배포주소 home 누를 시 페이지 오류
+  - ```<BrowserRouter basename = '/Refactoring-blog' >```
+  - [참고글](https://hallokay.tistory.com/entry/REACT-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-gh-page-%EB%B0%B0%ED%8F%AC-%EA%B2%BD%EB%A1%9C-%EC%98%A4%EB%A5%98)
+- SyntaxError: Unexpected token < in JSON at position 0
+  - [참고글A](https://velog.io/@rain98/syntaxerror-unexpected-token-in-json-at-position-0-%EC%97%90%EB%9F%AC-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95)
+  - 주소 경로가 바뀌는 바람에 data.json 경로도 바뀌고 data.json 안에 저장된 이미지 경로도 바꿔주어야했으 -> 해결!
