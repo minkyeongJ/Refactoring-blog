@@ -13,7 +13,7 @@ function App() {
 	return (
   <>
     <GlobalStyle />
-    <BrowserRouter>
+    <BrowserRouter basename="/Refactoring-blog">
       <Header />
       <Switch>
         <Route exact path="/">
