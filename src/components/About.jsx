@@ -6,7 +6,7 @@ function About(){
     <>
     <aside className="about">
 					<h2>About Me</h2>
-					<img src='assets/profile.jpg' alt="" className="user-profile" />
+					<img src='/Refactoring-blog/assets/profile.jpg' alt="" className="user-profile" />
 					<p className="user-name">Chilli</p>
 					<p className="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 					<h3>Categories</h3>
