@@ -22,6 +22,8 @@
 1. 이미지 경로 찾기
 - ```<img src={require('./src_assets/logo192.png').default}/>```
 - public 폴더안에 폴더를 만들고 이미지 파일 넣은 후 경로 작성하기
+2. 날짜 문자로 나타내기
+- https://mizzo-dev.tistory.com/entry/JavaScript%EB%82%A0%EC%A7%9C-Date-%ED%99%9C%EC%9A%A9%ED%95%B4%EC%84%9C-%EC%9A%94%EC%9D%BC-%EA%B5%AC%ED%95%98%EA%B8%B0
 # 이슈
 - profile-img가 ```{require().default}```로 작성하면 동작하지 않음
 - json data 사용하기

@@ -23,7 +23,6 @@ function PostView() {
   const postUserName = postDatas && postDatas.userName;
   const postCreated = postDatas && postDatas.created;
   const postContents = postDatas && postDatas.contents;
-  const postDescription = postDatas && postContents[0].text;
 
   const $viewContents = document.querySelector(".view-contents");
 

@@ -28,7 +28,7 @@ function Main(){
 				<h2 className="a11y-hidden">Post</h2>
 				<ul className="posts">
           {data.posts && data.posts.slice(0).reverse().map(post => (
-            <Link to={ `${postView}/${post.id}`}>
+            <Link to={ `${postView}/${post.id}`}> 
               <Posts post={ post } />
             </Link>
           ))}
