@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Refactoring-blog/static/css/main.9f2d5356.css",
-    "main.js": "/Refactoring-blog/static/js/main.247f871b.js",
+    "main.js": "/Refactoring-blog/static/js/main.f59b85f0.js",
     "static/media/background.jpg": "/Refactoring-blog/static/media/background.9d8ffdf2b026e3a71002.jpg",
     "static/media/Github.svg": "/Refactoring-blog/static/media/Github.44eca8266047557a439218d2afc94622.svg",
     "static/media/Logo.svg": "/Refactoring-blog/static/media/Logo.ea185720a23355dde4b383c500d5238d.svg",
@@ -24,10 +24,10 @@
     "static/media/ArrowLeft-blue.svg": "/Refactoring-blog/static/media/ArrowLeft-blue.a8f040986b41c7713bf5.svg",
     "static/media/ArrowTop.svg": "/Refactoring-blog/static/media/ArrowTop.31b9123f76deea3066cd.svg",
     "main.9f2d5356.css.map": "/Refactoring-blog/static/css/main.9f2d5356.css.map",
-    "main.247f871b.js.map": "/Refactoring-blog/static/js/main.247f871b.js.map"
+    "main.f59b85f0.js.map": "/Refactoring-blog/static/js/main.f59b85f0.js.map"
   },
   "entrypoints": [
     "static/css/main.9f2d5356.css",
-    "static/js/main.247f871b.js"
+    "static/js/main.f59b85f0.js"
   ]
 }
