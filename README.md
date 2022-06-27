@@ -1,5 +1,5 @@
 # React Blog
-
+배포링크: https://minkyeongj.github.io/Refactoring-blog/
 ## 현재 브랜치 셋팅 정보
 
 1. `npx create-react-app ./` : 해당 폴더에 React 설치
@@ -23,7 +23,7 @@
 - ```<img src={require('./src_assets/logo192.png').default}/>```
 - public 폴더안에 폴더를 만들고 이미지 파일 넣은 후 경로 작성하기
 2. 날짜 문자로 나타내기
-- https://mizzo-dev.tistory.com/entry/JavaScript%EB%82%A0%EC%A7%9C-Date-%ED%99%9C%EC%9A%A9%ED%95%B4%EC%84%9C-%EC%9A%94%EC%9D%BC-%EA%B5%AC%ED%95%98%EA%B8%B0
+- [참고글A](https://mizzo-dev.tistory.com/entry/JavaScript%EB%82%A0%EC%A7%9C-Date-%ED%99%9C%EC%9A%A9%ED%95%B4%EC%84%9C-%EC%9A%94%EC%9D%BC-%EA%B5%AC%ED%95%98%EA%B8%B0)
 3. Conditional Rendering
 - 로그인 상태에 따른 Header 변화
 - 인프런 리액트 강의 참고
