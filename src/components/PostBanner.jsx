@@ -34,7 +34,7 @@ function PostBanner(){
   const monthList = ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const dayOfWeekList = ['Sunday', 'Monday', 'Tuesday', 'Wednsday', 'Thursday', 'Friday', 'Saterday'];
 
-  let dateStr = new Date(year, month, day).toString();
+  let dateStr = new Date(year, month-1, day).toString();
   const dateStrArr = dateStr && dateStr.split(' ');
   const monthStr = monthList.filter(month => dateStrArr[1] === month.slice(0, 3));
   const dayOfWeekStr = dayOfWeekList.filter(dayOfWeek => dateStrArr[0]=== dayOfWeek.slice(0, 3));
