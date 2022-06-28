@@ -59,3 +59,5 @@
   - 주소 경로가 바뀌는 바람에 data.json 경로도 바뀌고 data.json 안에 저장된 이미지 경로도 바꿔주어야했으 -> 해결!
 - gh-page에 이미지 경로 반영 안되는 문제 발생
   - localhost:3000 경로를 유동적으로 바뀔 수 있는 것으로 바꿔야 할 것같다는 추측
+  - ```https://minkyeongj.github.io/Refactoring-blog/data.json```으로 주소를 변경하여 해결!
+  - 해결된 이유는 위 주소에 파일이 저장되어있기 때문에 로컬에서도 접근이 가능하기 때문이다.
