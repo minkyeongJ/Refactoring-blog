@@ -18,8 +18,7 @@
   ![login](https://user-images.githubusercontent.com/54294796/173001206-bf815686-0020-4976-bf6a-76277122f7f2.jpg)
 4. 더미 데이터를 가져와 게시글, 블로그 정보, 유저정보 뿌려주기
 
-# ver 1.1.0 리액트로 동작하게 리팩토링 하기
-## 사용한 방법들
+# 사용한 방법들
 1. 이미지 경로 찾기
 - ```<img src={require('./src_assets/logo192.png').default}/>```
 - public 폴더안에 폴더를 만들고 이미지 파일 넣은 후 경로 작성하기
@@ -28,8 +27,6 @@
 3. Conditional Rendering
 - 로그인 상태에 따른 Header 변화
 - 인프런 리액트 강의 참고
-
-# ver 1.2.0 css를 styled-conponent로 리팩토링 하기
 # 이슈
 - profile-img가 ```{require().default}```로 작성하면 동작하지 않음
 - json data 사용하기
