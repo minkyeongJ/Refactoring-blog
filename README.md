@@ -57,3 +57,5 @@
 - SyntaxError: Unexpected token < in JSON at position 0
   - [참고글A](https://velog.io/@rain98/syntaxerror-unexpected-token-in-json-at-position-0-%EC%97%90%EB%9F%AC-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95)
   - 주소 경로가 바뀌는 바람에 data.json 경로도 바뀌고 data.json 안에 저장된 이미지 경로도 바꿔주어야했으 -> 해결!
+- gh-page에 이미지 경로 반영 안되는 문제 발생
+  - localhost:3000 경로를 유동적으로 바뀔 수 있는 것으로 바꿔야 할 것같다는 추측

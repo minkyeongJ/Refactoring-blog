@@ -11,7 +11,7 @@ function Header() {
   const [isLogin, setIsLogin] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3000/Refactoring-blog/data.json", {
+    fetch("https://minkyeongj.github.io//Refactoring-blog/data.json", {
       method: 'GET',
     })
     .then(res => res.json())

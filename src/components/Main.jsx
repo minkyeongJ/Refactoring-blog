@@ -9,9 +9,10 @@ import { Link } from "react-router-dom";
 
 function Main(){
   const [data, setData] = useState([]);
+  console.log('public url: ', process.env.PUBLIC_URL);
 
   useEffect(() => {
-    fetch("http://localhost:3000/Refactoring-blog/data.json", {
+    fetch("https://minkyeongj.github.io//Refactoring-blog/data.json", {
       method: 'GET',
     })
     .then(res => res.json())
