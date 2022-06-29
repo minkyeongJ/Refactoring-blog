@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Author from './Author';
 
 function PostView() {
   const postId = useParams().id;
@@ -23,7 +24,11 @@ function PostView() {
   const postUserName = postDatas && postDatas.userName;
   const postCreated = postDatas && postDatas.created;
   const postContents = postDatas && postDatas.contents;
-
+  const props = {
+    postProfileImg: postProfileImg, 
+    postUserName: postUserName, 
+    postCreated: postCreated
+  };
   const $viewContents = document.querySelector(".view-contents");
 
   return (
@@ -32,12 +37,7 @@ function PostView() {
 				<section className="wrap-box">
 					<div className="inner">
 						{/* <!-- author --> */}
-						<dl className="author-wrap">
-							<dt className="a11y-hidden">Author</dt>
-							<dd className="author"><img src={postProfileImg} alt="" /> {postUserName}</dd>
-							<dt className="a11y-hidden">Created</dt>
-							<dd className="created">{postCreated}</dd>
-						</dl>
+						<Author props={props}/>
 						{/* <!-- //author --> */}
 
 						{/* <!-- category --> */}

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import About from "./About";
 import Posts from './Posts';
-import './css/Post.css';
-import './css/Posts.css';
-import './css/About.css';
 import './css/Main.css';
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
 
 function Main(){
   const [data, setData] = useState([]);
@@ -27,17 +26,33 @@ function Main(){
     <main>
       <div className="max-width">
 				<h2 className="a11y-hidden">Post</h2>
-				<ul className="posts">
+        <PostsStyle>
           {data.posts && data.posts.slice(0).reverse().map(post => (
             <Link to={ `${postView}/${post.id}`}> 
               <Posts post={ post } />
             </Link>
           ))}
-        </ul>
+        </PostsStyle>
         <About />
       </div>
     </main>
   );
 };
+
+const PostsStyle = styled.ul`
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2.4rem;
+
+  @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 540px) {
+    .posts {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+`
 
 export default Main;

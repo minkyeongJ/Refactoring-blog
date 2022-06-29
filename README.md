@@ -30,6 +30,8 @@
 - 인프런 리액트 강의 참고
 
 # ver 1.2.0 css를 styled-conponent로 리팩토링 하기
+- Author.jsx 컴포넌트 생성
+  - 스타일 컴포넌트 작성시 중복되는 부분 발견으로 컴포넌트화
 # 이슈
 - profile-img가 ```{require().default}```로 작성하면 동작하지 않음
 - json data 사용하기
