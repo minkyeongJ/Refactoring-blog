@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Author from './Author';
+import Category from './Category';
 
 function PostView() {
   const postId = useParams().id;
@@ -36,18 +37,8 @@ function PostView() {
 			<div className="max-width">
 				<section className="wrap-box">
 					<div className="inner">
-						{/* <!-- author --> */}
 						<Author props={props}/>
-						{/* <!-- //author --> */}
-
-						{/* <!-- category --> */}
-						<dl className="category">
-							<dt className="a11y-hidden">Category</dt>
-							{postCategory && postCategory.map(category => (
-                <dd>{category}</dd>
-              ))}
-						</dl>
-						{/* <!-- //category --> */}
+						{postCategory && <Category postCategory={postCategory}/>}
 						<div className="title-wrap">
 							<h2>{postTitle}</h2>
 							<button className="btn-like">Like</button>

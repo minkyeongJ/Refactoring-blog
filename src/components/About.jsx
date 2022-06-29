@@ -1,7 +1,24 @@
+import { useState } from 'react';
+import { useEffect } from 'react';
 import styled from 'styled-components';
+
 import './css/Category.css';
 
 function About(){
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://minkyeongj.github.io//Refactoring-blog/data.json", {
+      method: 'GET',
+    })
+    .then(res => res.json())
+    .then(data => {
+      setData(data);
+    });
+  }, []);
+  const userDatas = data.users && data.users[0];
+  const userCategory = userDatas && {type: 'main', datas: userDatas.category};
+
   return (
     <AboutStyle>
       <h2>About Me</h2>

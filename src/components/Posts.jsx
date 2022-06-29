@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Author from './Author';
+import Category from './Category';
 
 function Posts({post}){
   const postId = post.id;
@@ -29,14 +30,8 @@ function Posts({post}){
         <article>
           <img src={postImg} alt="" />
           <div className="contents-wrap">
-            {/* <!-- category --> */}
-            <dl className="category">
-              <dt className="a11y-hidden">Category</dt>
-              {postCategory.map(category => (
-                <dd>{category}</dd>
-              ))}
-            </dl>
-            {/* <!-- //category --> */}
+            
+            <Category postCategory={postCategory}/>
 
             <h3>{postTitle}</h3>
 
