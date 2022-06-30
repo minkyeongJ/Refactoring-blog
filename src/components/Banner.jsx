@@ -3,7 +3,6 @@ import { Route, Switch, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import mainBg from '../assets/background.jpg'
 
-
 function Banner(){
   const [data, setData] = useState([]);
 
@@ -46,7 +45,7 @@ function Banner(){
   return (
     <Switch>
       <Route exact path="/">
-        <BannerStyle>
+        <BannerStyle bgImg={mainBg}>
           <div className="max-width">
             <div className="banner-contents">
               <p className="sub-text">{subTitle}</p>
@@ -73,7 +72,7 @@ function Banner(){
 
 const BannerStyle = styled.div`
 	position: relative;
-	background: ${(props) => `url(${props.bgImg})` || `url(${mainBg})`} no-repeat 50% 50% / cover;
+	background: ${(props) => `url(${props.bgImg})`} no-repeat 50% 50% / cover;
 
 	height: 27em;
 	margin-bottom: -7em;
