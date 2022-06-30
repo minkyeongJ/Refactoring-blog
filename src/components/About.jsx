@@ -2,8 +2,6 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import styled from 'styled-components';
 
-import './css/Category.css';
-
 function About(){
   const [data, setData] = useState([]);
 
@@ -16,6 +14,7 @@ function About(){
       setData(data);
     });
   }, []);
+  
   const userDatas = data.users && data.users[0];
   const userCategory = userDatas && {type: 'main', datas: userDatas.category};
 
@@ -141,6 +140,20 @@ const AboutStyle = styled.aside`
 
   @media (max-width: 1024px) {
       width: 100%;
+  }
+`
+
+const CategoryStyle = styled.ul`
+  display: flex;
+	flex-wrap: wrap;
+	color: var(--main-color);
+  
+  dd {
+    margin-right: 0.4rem;
+    padding: 0.2rem 1.2rem;
+    border-radius: calc(var(--border-radius) * 2);
+    background: var(--gray-background);
+    font-size: 1.2rem;
   }
 `
 
