@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import GlobalStyle from "./components/GlobalStyle";
-import Banner from "./components/MainBanner";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import Main from "./components/Main";
 import PostView from './components/PostView';
-import PostBanner from "./components/PostBanner";
+
+import Banner from "./components/Banner";
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           <Main />
         </Route>
         <Route exact path="/postView/:id">
-          <PostBanner />
+          <Banner />
           <PostView />
         </Route>
       </Switch>

@@ -18,19 +18,14 @@
   ![login](https://user-images.githubusercontent.com/54294796/173001206-bf815686-0020-4976-bf6a-76277122f7f2.jpg)
 4. 더미 데이터를 가져와 게시글, 블로그 정보, 유저정보 뿌려주기
 
-# ver 1.1.0 리액트로 동작하게 리팩토링 하기
+# v1.1.0 - 리액트로 동작하게 리팩토링
 ## 사용한 방법들
 1. 이미지 경로 찾기
 - ```<img src={require('./src_assets/logo192.png').default}/>```
 - public 폴더안에 폴더를 만들고 이미지 파일 넣은 후 경로 작성하기
 2. 날짜 문자로 나타내기
 - [참고글A](https://mizzo-dev.tistory.com/entry/JavaScript%EB%82%A0%EC%A7%9C-Date-%ED%99%9C%EC%9A%A9%ED%95%B4%EC%84%9C-%EC%9A%94%EC%9D%BC-%EA%B5%AC%ED%95%98%EA%B8%B0)
-3. Conditional Rendering
-- 로그인 상태에 따른 Header 변화
-- 인프런 리액트 강의 참고
-
-# ver 1.2.0 css를 styled-conponent로 리팩토링 하기
-# 이슈
+## 이슈
 - profile-img가 ```{require().default}```로 작성하면 동작하지 않음
 - json data 사용하기
   - [참고글](https://velog.io/@yyeonjju/TIL-React-%EC%95%84%EC%A3%BC-%EC%89%BD%EA%B2%8C-%EB%94%B0%EB%9D%BC%ED%95%98%EB%8A%94-Mock-Data-%ED%99%9C%EC%9A%A9%EB%B2%95)
@@ -64,3 +59,17 @@
   - localhost:3000 경로를 유동적으로 바뀔 수 있는 것으로 바꿔야 할 것같다는 추측
   - ```https://minkyeongj.github.io/Refactoring-blog/data.json```으로 주소를 변경하여 해결!
   - 해결된 이유는 위 주소에 파일이 저장되어있기 때문에 로컬에서도 접근이 가능하기 때문이다.
+
+  # v1.2.0 - css를 styled-conponent로 리팩토링
+- Author.jsx 컴포넌트 생성
+  - 스타일 컴포넌트 작성시 중복되는 부분 발견으로 컴포넌트화
+## 사용 기능
+1. Conditional Rendering
+- 로그인 상태에 따른 Header 변화
+- 인프런 리액트 강의 참고
+
+## 이슈
+- Banner.jsx 컴포넌트를 만들어 메인페이지와 포스트페이지 다르게 나타내기
+  - 
+- 글 중복 출력
+- Author와 Category 마진 이슈

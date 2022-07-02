@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
-import './css/reset.css';
-import './css/global.css';
-import './css/button.css';
-import './css/wrapbox.css';
-import './css/view.css';
+import './globalStyle/reset.css';
+import './globalStyle/global.css';
+import './globalStyle/button.css';
+import './globalStyle/wrapbox.css';
+import './globalStyle/view.css';
 
 const GlobalStyle = createGlobalStyle`
 
