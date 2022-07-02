@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 function Author({props}) {
   return(
-    <AuthorStyle>
+    <AuthorStyle className="author-wrap">
         <dt className="a11y-hidden">Author</dt>
         <dd className="author"><img src={props.postProfileImg} alt="" /> {props.postUserName}</dd>
         <dt className="a11y-hidden">Created</dt>

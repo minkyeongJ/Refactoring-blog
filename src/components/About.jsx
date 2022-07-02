@@ -19,7 +19,7 @@ function About(){
   const userCategory = userDatas && {type: 'main', datas: userDatas.category};
 
   return (
-    <AboutStyle>
+    <AboutStyle className="about">
       <h2>About Me</h2>
       <img src='/Refactoring-blog/assets/profile.jpg' alt="" className="user-profile" />
       <p className="user-name">Chilli</p>

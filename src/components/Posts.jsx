@@ -26,7 +26,7 @@ function Posts({post}){
   // console.log(data.posts.postId);
   return (
     <li>
-      <PostStyle href="post-view.html">
+      <PostStyle href="post-view.html" className="post">
         <article>
           <img src={postImg} alt="" />
           <div className="contents-wrap">
@@ -98,6 +98,24 @@ const PostStyle = styled.a`
       -webkit-line-clamp: 2;
     }
   }
+
+  .posts {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2.4rem;
+}
+
+@media (max-width: 768px) {
+	.posts {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 540px) {
+	.posts {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
 `;
 
 

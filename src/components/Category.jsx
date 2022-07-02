@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 function Category(props) {
   return (
-    <CategoryStyle>
+    <CategoryStyle className="category">
       <dt className="a11y-hidden">Category</dt>
-      {props.postCategory.map(category => (
+      {props.postCategory.map((category) => (
         <dd>{category}</dd>
       ))}
     </CategoryStyle>
