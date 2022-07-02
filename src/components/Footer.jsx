@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import arrowTop from "../assets/ArrowTop.svg";
 
 function Footer() {
   return (
@@ -37,7 +38,7 @@ const FooterStyle = styled.footer`
     padding-top: 2.2rem;
     border: 0;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    background: var(--main-color) url(../../assets/ArrowTop.svg) no-repeat 50%
+    background: var(--main-color) url(${arrowTop}) no-repeat 50%
       0.4rem / 4rem;
     color: var(--white-color);
     text-align: center;
