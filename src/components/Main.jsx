@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import About from "./About";
 import Posts from "./Posts";
-// import './css/Main.css';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
