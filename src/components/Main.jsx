@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import About from "./About";
 import Posts from './Posts';
-import './css/Main.css';
+// import './css/Main.css';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -23,7 +23,7 @@ function Main(){
   const postView = "/postView";
 
   return (
-    <main>
+    <MainStyle>
       <div className="max-width">
 				<h2 className="a11y-hidden">Post</h2>
         <PostsStyle>
@@ -35,9 +35,23 @@ function Main(){
         </PostsStyle>
         <About />
       </div>
-    </main>
+    </MainStyle>
   );
 };
+
+const MainStyle = styled.main`
+  & > .max-width {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 2.4rem;
+	position: relative;
+}
+@media (max-width: 1024px) {
+	main .max-width {
+		flex-direction: column;
+	}
+}
+`
 
 const PostsStyle = styled.ul`
 	display: grid;
