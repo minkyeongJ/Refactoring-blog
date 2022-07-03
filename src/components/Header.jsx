@@ -23,13 +23,10 @@ function Header() {
 
   console.log(userData);
 
-  //버튼 동작 틀
-  const handleLoginClick = () => {
-    setIsLogin(true);
-  };
-
-  const handleLogoutClick = () => {
-    setIsLogin(false);
+  //버튼 동작
+  const handleLoginState = (state) => {
+    setIsLogin(state);
+    console.log(state);
   };
 
   return (
@@ -41,7 +38,11 @@ function Header() {
               <img src={require(`../assets/Logo.svg`).default} alt="My Blog" />
             </Link>
           </h1>
-          {isLogin ? <Login /> : <Logout />}
+          {isLogin ? (
+            <Login propFunc={handleLoginState} />
+          ) : (
+            <Logout propFunc={handleLoginState} />
+          )}
         </ProfileStyle>
       </HeaderStyle>
     </>
