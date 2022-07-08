@@ -77,11 +77,11 @@
 
 ### 이슈
 
-- ## Banner.jsx 컴포넌트를 만들어 메인페이지와 포스트페이지 다르게 나타내기
+- Banner.jsx 컴포넌트를 만들어 메인페이지와 포스트페이지 다르게 나타내기
 - 글 중복 출력
 - Author와 Category 마진 이슈
 
-# v1.3.0 - 로그아웃/로그인 버튼 누를 시 상태변화
+## v1.3.0 - 로그아웃/로그인 버튼 누를 시 상태변화
 
 - 하위 컴포넌트에서 상위 컴포넌트에게 데이터 넘기기
   - [참고글 A](https://velog.io/@onezerokang/%ED%95%98%EC%9C%84-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EA%B0%80-%EC%83%81%EC%9C%84-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%A1%9C-%EA%B0%92%EC%9D%84-%EC%A0%84%EB%8B%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
