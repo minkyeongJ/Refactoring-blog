@@ -13,6 +13,36 @@
 
 # 프로젝트 진행 과정
 
+## v1.4.0 - Router v5에서 v6 형식으로 수정, 파일 구조 변경, styled-component 포맷 변경
+
+- Router v5에서 v6 형식으로 수정
+  - Switch에서 Routes 형식으로 변경
+- 페이지는 pages로 컴포넌트는 components로 파일 분리
+
+## v1.3.0 - 로그아웃/로그인 버튼 누를 시 상태변화
+
+- 하위 컴포넌트에서 상위 컴포넌트에게 데이터 넘기기
+  - [참고글 A](https://velog.io/@onezerokang/%ED%95%98%EC%9C%84-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EA%B0%80-%EC%83%81%EC%9C%84-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%A1%9C-%EA%B0%92%EC%9D%84-%EC%A0%84%EB%8B%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
+- onClick을 사용하여 로그인 상태 변환
+
+## v1.2.0 - css를 styled-conponent로 리팩토링
+
+- Author.jsx 컴포넌트 생성
+  - 스타일 컴포넌트 작성시 중복되는 부분 발견으로 컴포넌트화
+
+### 사용 기능
+
+1. Conditional Rendering
+
+- 로그인 상태에 따른 Header 변화
+- 인프런 리액트 강의 참고
+
+### 이슈
+
+- ## Banner.jsx 컴포넌트를 만들어 메인페이지와 포스트페이지 다르게 나타내기
+- 글 중복 출력
+- Author와 Category 마진 이슈
+
 ## v1.1.0 - 리액트로 동작하게 리팩토링
 
 ### 사용한 방법들
@@ -62,27 +92,3 @@
   - localhost:3000 경로를 유동적으로 바뀔 수 있는 것으로 바꿔야 할 것같다는 추측
   - `https://minkyeongj.github.io/Refactoring-blog/data.json`으로 주소를 변경하여 해결!
   - 해결된 이유는 위 주소에 파일이 저장되어있기 때문에 로컬에서도 접근이 가능하기 때문이다.
-
-## v1.2.0 - css를 styled-conponent로 리팩토링
-
-- Author.jsx 컴포넌트 생성
-  - 스타일 컴포넌트 작성시 중복되는 부분 발견으로 컴포넌트화
-
-### 사용 기능
-
-1. Conditional Rendering
-
-- 로그인 상태에 따른 Header 변화
-- 인프런 리액트 강의 참고
-
-### 이슈
-
-- ## Banner.jsx 컴포넌트를 만들어 메인페이지와 포스트페이지 다르게 나타내기
-- 글 중복 출력
-- Author와 Category 마진 이슈
-
-# v1.3.0 - 로그아웃/로그인 버튼 누를 시 상태변화
-
-- 하위 컴포넌트에서 상위 컴포넌트에게 데이터 넘기기
-  - [참고글 A](https://velog.io/@onezerokang/%ED%95%98%EC%9C%84-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EA%B0%80-%EC%83%81%EC%9C%84-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%A1%9C-%EA%B0%92%EC%9D%84-%EC%A0%84%EB%8B%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
-- onClick을 사용하여 로그인 상태 변환

@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import Author from './Author';
-import Category from './Category';
+import styled from "styled-components";
+import Author from "./author/Author";
+import Category from "./category/Category";
 
-function Posts({post}){
+function Posts({ post }) {
   const postId = post.id;
   const postImg = post.thumbnail;
   const postTitle = post.title;
@@ -13,9 +13,9 @@ function Posts({post}){
   const postContents = post.contents;
   const postDescription = postContents[0].text;
   const propsAuthor = {
-    postProfileImg: postProfileImg, 
-    postUserName: postUserName, 
-    postCreated: postCreated
+    postProfileImg: postProfileImg,
+    postUserName: postUserName,
+    postCreated: postCreated,
   };
 
   console.log(postTitle);
@@ -30,22 +30,19 @@ function Posts({post}){
         <article>
           <img src={postImg} alt="" />
           <div className="contents-wrap">
-            
-            <Category postCategory={postCategory}/>
+            <Category postCategory={postCategory} />
 
             <h3>{postTitle}</h3>
 
-            <Author props={propsAuthor}/>
+            <Author props={propsAuthor} />
 
-            <p className="post-description">
-              {postDescription}
-            </p>
+            <p className="post-description">{postDescription}</p>
           </div>
         </article>
       </PostStyle>
     </li>
   );
-};
+}
 
 const PostStyle = styled.a`
   display: block;
@@ -57,11 +54,12 @@ const PostStyle = styled.a`
   article > img {
     width: 100%;
   }
-  
+
   .contents-wrap {
     padding: 1.6rem 2.4rem 2.4rem;
 
-    h3, .post-description {
+    h3,
+    .post-description {
       display: -webkit-box;
       -webkit-box-orient: vertical;
       overflow: hidden;
@@ -100,24 +98,22 @@ const PostStyle = styled.a`
   }
 
   .posts {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 2.4rem;
-}
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+  }
 
-@media (max-width: 768px) {
-	.posts {
-		grid-template-columns: repeat(2, 1fr);
-	}
-}
+  @media (max-width: 768px) {
+    .posts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
-@media (max-width: 540px) {
-	.posts {
-		grid-template-columns: repeat(1, 1fr);
-	}
-}
+  @media (max-width: 540px) {
+    .posts {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 `;
-
-
 
 export default Posts;

@@ -1,6 +1,6 @@
-import Banner from "../components/Banner";
+import Banner from "../components/banner/Banner";
 import PostView from "../components/PostView";
-import {useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
 
 export function PostPage() {
   const postId = useParams().id;

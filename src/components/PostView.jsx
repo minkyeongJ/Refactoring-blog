@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Author from "./Author";
-import Category from "./Category";
+import Author from "./author/Author";
+import Category from "./category/Category";
 import { Link } from "react-router-dom";
 
 function PostView({ postId }) {

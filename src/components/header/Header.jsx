@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Login from "./Login";
-import Logout from "./Logout";
+import Login from "../login/Login";
+import Logout from "../logout/Logout";
 
 function Header() {
   const [data, setData] = useState([]);
@@ -35,7 +35,7 @@ function Header() {
         <ProfileStyle className="max-width">
           <h1>
             <Link to={"/"}>
-              <img src={require(`../assets/Logo.svg`).default} alt="My Blog" />
+              <img src={require(`../../assets/Logo.svg`).default} alt="My Blog" />
             </Link>
           </h1>
           {isLogin ? (
@@ -145,7 +145,7 @@ const ProfileStyle = styled.div`
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    background: var(--main-color) url(../../assets/icon-image.svg) no-repeat 50%
+    background: var(--main-color) url(../../../assets/icon-image.svg) no-repeat 50%
       50% / 2.4rem;
     position: absolute;
     cursor: pointer;

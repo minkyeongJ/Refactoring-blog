@@ -15,7 +15,7 @@ function Login(props) {
         <li>
           <a href="#" className="button">
             <img
-              src={require(`../assets/icon-modify-white.svg`).default}
+              src={require(`../../assets/icon-modify-white.svg`).default}
               alt=""
             />
             <span>Write</span>
@@ -23,7 +23,7 @@ function Login(props) {
         </li>
         <li>
           <button className="button white" onClick={changeState}>
-            <img src={require(`../assets/icon-logout.svg`).default} alt="" />
+            <img src={require(`../../assets/icon-logout.svg`).default} alt="" />
             <span>Logout</span>
           </button>
         </li>

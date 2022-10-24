@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import About from "./About";
+import About from "./about/About";
 import Posts from "./Posts";
 import { Link } from "react-router-dom";
 import styled from "styled-components";

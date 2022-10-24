@@ -1,17 +1,16 @@
-import Banner from '../components/Banner';
-import Footer from '../components/Footer';
-import GlobalStyle from '../GlobalStyle';
-import Main from '../components/Main';
-
+import Banner from "../components/banner/Banner";
+import Footer from "../components/footer/Footer";
+import GlobalStyle from "../GlobalStyle";
+import Main from "../components/Main";
 
 function Home() {
-	return (
-  <>
-    <GlobalStyle />
-    <Banner />
-    <Main />
-    <Footer />
-  </>
+  return (
+    <>
+      <GlobalStyle />
+      <Banner />
+      <Main />
+      <Footer />
+    </>
   );
 }
 

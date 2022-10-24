@@ -1,8 +1,8 @@
 import GlobalStyle from "./GlobalStyle";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import { Router } from "./pages/Router";
-import {BrowserRouter} from "react-router-dom"
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
