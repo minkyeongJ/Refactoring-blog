@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Author from "../author/Author";
 import Category from "../category/Category";
 import { Link } from "react-router-dom";
+import * as S from "./Style";
 
 function PostView({ postId }) {
   const [data, setData] = useState([]);
@@ -28,44 +29,42 @@ function PostView({ postId }) {
     postUserName: postUserName,
     postCreated: postCreated,
   };
-  const $viewContents = document.querySelector(".view-contents");
 
   return (
     <div className="view">
       <div className="max-width">
-        <section className="wrap-box">
-          <div className="inner">
+        <S.ViewWrap>
+          <S.ViewWrapInner>
             <Author props={props} />
             {postCategory && <Category postCategory={postCategory} />}
-            <div className="title-wrap">
+            <S.TitleWrap>
               <h2>{postTitle}</h2>
               <button className="btn-like">Like</button>
-            </div>
+            </S.TitleWrap>
             <hr />
-            <div className="view-contents">
+            <S.ViewContents>
               {postContents?.map((data) => {
-                const postType = document.createElement(data.type);
                 if (data.type === "p") {
-                  postType.textContent = data.text;
+                  return (<p>{data.text}</p>);
                 } else if (data.type === "img") {
-                  postType.src = data.src;
+                  return (<img src={data.src} />);
                 }
-                $viewContents.append(postType);
+                console.log(data);
               })}
-            </div>
-            <div className="btn-group">
+            </S.ViewContents>
+            <S.WrapButtonGroup>
               <Link to={"#"} className="btn-modify">
                 <span className="a11y-hidden">modify</span>
               </Link>
               <button type="button" className="btn-delete">
                 <span className="a11y-hidden">delete</span>
               </button>
-            </div>
-            <Link to={"./"} className="btn-back">
+            </S.WrapButtonGroup>
+            <S.ButtonBack to={"../"}>
               <span className="a11y-hidden">Back</span>
-            </Link>
-          </div>
-        </section>
+            </S.ButtonBack>
+          </S.ViewWrapInner>
+        </S.ViewWrap>
       </div>
     </div>
   );

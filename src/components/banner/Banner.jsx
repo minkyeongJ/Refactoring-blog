@@ -33,7 +33,7 @@ function Banner({postId}) {
 
   const monthList = [
     "January",
-    "Feburary",
+    "February",
     "March",
     "April",
     "May",
@@ -49,10 +49,10 @@ function Banner({postId}) {
     "Sunday",
     "Monday",
     "Tuesday",
-    "Wednsday",
+    "Wednesday",
     "Thursday",
     "Friday",
-    "Saterday",
+    "Saturday",
   ];
 
   let dateStr = new Date(year, month - 1, day).toString();
