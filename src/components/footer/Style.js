@@ -1,20 +1,7 @@
 import styled from "styled-components";
-import arrowTop from "../assets/ArrowTop.svg";
+import arrowTop from "../../assets/ArrowTop.svg";
 
-function Footer() {
-  return (
-    <>
-      <FooterStyle>
-        <div className="max-width">
-          <h2>©Weniv Corp.</h2>
-          <button className="top-button">TOP</button>
-        </div>
-      </FooterStyle>
-    </>
-  );
-}
-
-const FooterStyle = styled.footer`
+export const FooterStyle = styled.footer`
   background: var(--white-color);
   margin-top: 10rem;
   .max-width {
@@ -38,12 +25,9 @@ const FooterStyle = styled.footer`
     padding-top: 2.2rem;
     border: 0;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    background: var(--main-color) url(${arrowTop}) no-repeat 50%
-      0.4rem / 4rem;
+    background: var(--main-color) url(${arrowTop}) no-repeat 50% 0.4rem / 4rem;
     color: var(--white-color);
     text-align: center;
     font-weight: bold;
   }
 `;
-
-export default Footer;

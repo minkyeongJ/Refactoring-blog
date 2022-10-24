@@ -1,33 +1,19 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import GlobalStyle from "./components/GlobalStyle";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-
-import Main from "./components/Main";
-import PostView from './components/PostView';
-
-import Banner from "./components/Banner";
-
+import GlobalStyle from "./GlobalStyle";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import { Router } from "./pages/Router";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
-	return (
-  <>
-    <GlobalStyle />
-    <BrowserRouter basename="/Refactoring-blog">
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          <Banner />
-          <Main />
-        </Route>
-        <Route exact path="/postView/:id">
-          <Banner />
-          <PostView />
-        </Route>
-      </Switch>
-      <Footer />
-    </BrowserRouter>
-  </>
+  return (
+    <>
+      <BrowserRouter basename="/Refactoring-blog">
+        <GlobalStyle />
+        <Header />
+        <Router />
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 

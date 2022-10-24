@@ -11,13 +11,13 @@ function Logout(props) {
       <ul>
         <li>
           <a href="#" className="button gray" onClick={changeState}>
-            <img src={require("../assets/icon-login.svg").default} alt="" />
+            <img src={require("../../assets/icon-login.svg").default} alt="" />
             <span>Login</span>
           </a>
         </li>
         <li className="only-pc">
           <a href="#" className="button gray" onClick={changeState}>
-            <img src={require("../assets/icon-register.svg").default} alt="" />
+            <img src={require("../../assets/icon-register.svg").default} alt="" />
             <span>Register</span>
           </a>
         </li>

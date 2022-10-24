@@ -1,55 +1,6 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Login from "./Login";
-import Logout from "./Logout";
 
-function Header() {
-  const [data, setData] = useState([]);
-  const [isLogin, setIsLogin] = useState(true);
-
-  useEffect(() => {
-    fetch("https://minkyeongj.github.io//Refactoring-blog/data.json", {
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
-  }, []);
-
-  const userData = data.users;
-
-  console.log(userData);
-
-  //버튼 동작
-  const handleLoginState = (state) => {
-    setIsLogin(state);
-    console.log(state);
-  };
-
-  return (
-    <>
-      <HeaderStyle>
-        <ProfileStyle className="max-width">
-          <h1>
-            <Link to={"/"}>
-              <img src={require(`../assets/Logo.svg`).default} alt="My Blog" />
-            </Link>
-          </h1>
-          {isLogin ? (
-            <Login propFunc={handleLoginState} />
-          ) : (
-            <Logout propFunc={handleLoginState} />
-          )}
-        </ProfileStyle>
-      </HeaderStyle>
-    </>
-  );
-}
-
-const HeaderStyle = styled.header`
+export const HeaderStyle = styled.header`
   background: var(--white-color);
 
   .max-width {
@@ -116,7 +67,7 @@ const HeaderStyle = styled.header`
   }
 `;
 
-const ProfileStyle = styled.div`
+export const ProfileStyle = styled.div`
   .profile-wrap {
     width: 12rem;
     height: 12rem;
@@ -145,11 +96,9 @@ const ProfileStyle = styled.div`
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    background: var(--main-color) url(../../assets/icon-image.svg) no-repeat 50%
-      50% / 2.4rem;
+    background: var(--main-color) url(../../../assets/icon-image.svg) no-repeat
+      50% 50% / 2.4rem;
     position: absolute;
     cursor: pointer;
   }
 `;
-
-export default Header;

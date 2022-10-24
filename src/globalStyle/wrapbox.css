@@ -76,10 +76,7 @@
 	.write .wrap-box {
 		width: 100%;
 	}
-	.view .wrap-box,
-	.write .wrap-box {
-		width: 100%;
-	}
+
 	.wrap-box .btn-group {
 		top: 6rem;
 		right: 6rem;
