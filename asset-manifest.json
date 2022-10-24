@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Refactoring-blog/static/css/main.92106e27.css",
-    "main.js": "/Refactoring-blog/static/js/main.0ac912a8.js",
+    "main.css": "/Refactoring-blog/static/css/main.665ba2e3.css",
+    "main.js": "/Refactoring-blog/static/js/main.7a8d84db.js",
     "static/media/background.jpg": "/Refactoring-blog/static/media/background.9d8ffdf2b026e3a71002.jpg",
     "static/media/Github.svg": "/Refactoring-blog/static/media/Github.44eca8266047557a439218d2afc94622.svg",
     "static/media/Logo.svg": "/Refactoring-blog/static/media/Logo.ea185720a23355dde4b383c500d5238d.svg",
@@ -20,13 +20,13 @@
     "static/media/icon-login.svg": "/Refactoring-blog/static/media/icon-login.8e36ae402cd69fd4cdea4c5934019277.svg",
     "static/media/icon-like-white.svg": "/Refactoring-blog/static/media/icon-like-white.547a2a003e8f8143fc9c.svg",
     "index.html": "/Refactoring-blog/index.html",
-    "static/media/ArrowLeft-blue.svg": "/Refactoring-blog/static/media/ArrowLeft-blue.a8f040986b41c7713bf5.svg",
+    "static/media/ArrowLeft-blue.svg": "/Refactoring-blog/static/media/ArrowLeft-blue.a8f040986b41c7713bf5245e24bce418.svg",
     "static/media/ArrowTop.svg": "/Refactoring-blog/static/media/ArrowTop.31b9123f76deea3066cdfd209a2d5525.svg",
-    "main.92106e27.css.map": "/Refactoring-blog/static/css/main.92106e27.css.map",
-    "main.0ac912a8.js.map": "/Refactoring-blog/static/js/main.0ac912a8.js.map"
+    "main.665ba2e3.css.map": "/Refactoring-blog/static/css/main.665ba2e3.css.map",
+    "main.7a8d84db.js.map": "/Refactoring-blog/static/js/main.7a8d84db.js.map"
   },
   "entrypoints": [
-    "static/css/main.92106e27.css",
-    "static/js/main.0ac912a8.js"
+    "static/css/main.665ba2e3.css",
+    "static/js/main.7a8d84db.js"
   ]
 }
