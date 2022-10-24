@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import About from "./about/About";
-import Posts from "./Posts";
+import About from "../about/About";
+import Posts from "../posts/Posts";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import * as S from "./Style";
 
 function Main() {
   const [data, setData] = useState([]);
@@ -21,10 +21,10 @@ function Main() {
   const postView = "/postView";
 
   return (
-    <MainStyle>
+    <S.MainStyle>
       <div className="max-width">
         <h2 className="a11y-hidden">Post</h2>
-        <PostsStyle className="posts">
+        <S.PostsStyle className="posts">
           {data.posts &&
             data.posts
               .slice(0)
@@ -34,39 +34,11 @@ function Main() {
                   <Posts post={post} />
                 </Link>
               ))}
-        </PostsStyle>
+        </S.PostsStyle>
         <About />
       </div>
-    </MainStyle>
+    </S.MainStyle>
   );
 }
-
-const MainStyle = styled.main`
-  & > .max-width {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 2.4rem;
-    position: relative;
-  }
-  @media (max-width: 1024px) {
-    .max-width {
-      flex-direction: column;
-    }
-  }
-`;
-
-const PostsStyle = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.4rem;
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 540px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-`;
 
 export default Main;

@@ -1,50 +1,6 @@
 import styled from "styled-components";
-import Author from "./author/Author";
-import Category from "./category/Category";
 
-function Posts({ post }) {
-  const postId = post.id;
-  const postImg = post.thumbnail;
-  const postTitle = post.title;
-  const postCategory = post.category;
-  const postProfileImg = post.profileImg;
-  const postUserName = post.userName;
-  const postCreated = post.created;
-  const postContents = post.contents;
-  const postDescription = postContents[0].text;
-  const propsAuthor = {
-    postProfileImg: postProfileImg,
-    postUserName: postUserName,
-    postCreated: postCreated,
-  };
-
-  console.log(postTitle);
-
-  // const post
-  console.log(postId);
-  console.log(postContents);
-  // console.log(data.posts.postId);
-  return (
-    <li>
-      <PostStyle href="post-view.html" className="post">
-        <article>
-          <img src={postImg} alt="" />
-          <div className="contents-wrap">
-            <Category postCategory={postCategory} />
-
-            <h3>{postTitle}</h3>
-
-            <Author props={propsAuthor} />
-
-            <p className="post-description">{postDescription}</p>
-          </div>
-        </article>
-      </PostStyle>
-    </li>
-  );
-}
-
-const PostStyle = styled.a`
+export const PostStyle = styled.a`
   display: block;
   overflow: hidden;
   border-radius: var(--border-radius);
@@ -115,5 +71,3 @@ const PostStyle = styled.a`
     }
   }
 `;
-
-export default Posts;
