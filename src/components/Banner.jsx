@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { Route, Switch, useParams } from "react-router-dom";
 import styled from "styled-components";
 import mainBg from "../assets/background.jpg";
 
-function Banner() {
+function Banner({postId}) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -23,8 +22,6 @@ function Banner() {
   const description = bannerData && bannerData.description;
 
   //PostBanner
-  const postId = useParams().id;
-
   const postDatas = data.posts && data.posts[postId - 1];
   const postMainBg = postDatas && postDatas.mainBg;
   console.log(postMainBg);
@@ -67,9 +64,10 @@ function Banner() {
     (dayOfWeek) => dateStrArr[0] === dayOfWeek.slice(0, 3)
   );
 
+  console.log(postId);
   return (
-    <Switch>
-      <Route exact path="/">
+    <>
+      {!postId ? (
         <BannerStyle className="banner" bgImg={mainBg}>
           <div className="max-width">
             <div className="banner-contents">
@@ -79,8 +77,7 @@ function Banner() {
             </div>
           </div>
         </BannerStyle>
-      </Route>
-      <Route exact path="/postView/:id">
+      ) : (
         <BannerStyle bgImg={postMainBg}>
           <div className="max-width">
             <div className="banner-contents">
@@ -90,8 +87,8 @@ function Banner() {
             </div>
           </div>
         </BannerStyle>
-      </Route>
-    </Switch>
+      )}
+    </>
   );
 }
 
