@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/refactoring-blog.vercel.app">
         <GlobalStyle />
         <Header />
         <Router />
