@@ -1,5 +1,4 @@
 import Banner from "../components/banner/Banner";
-import Footer from "../components/footer/Footer";
 import GlobalStyle from "../GlobalStyle";
 import Main from "../components/main/Main";
 
@@ -9,7 +8,6 @@ function Home() {
       <GlobalStyle />
       <Banner />
       <Main />
-      <Footer />
     </>
   );
 }
